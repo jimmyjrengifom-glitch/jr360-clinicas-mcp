@@ -34,7 +34,7 @@ Todas las operaciones son **100% locales** — sin costos de API, sin latencia, 
 **Requisito:** Python 3.10+
 
 ```bash
-git clone https://github.com/jimmyrengifo/jr360-clinicas-mcp.git
+git clone https://github.com/jimmyjrengifom-glitch/jr360-clinicas-mcp.git
 cd jr360-clinicas-mcp
 
 python3 -m venv .venv
