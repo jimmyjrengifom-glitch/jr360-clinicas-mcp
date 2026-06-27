@@ -161,4 +161,6 @@ def jr360_calculate_revenue_loss(
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    # ponytail: stdio para Claude Desktop, streamable-http para Easypanel
+    transport = os.getenv("MCP_TRANSPORT", "stdio")
+    mcp.run(transport=transport)
