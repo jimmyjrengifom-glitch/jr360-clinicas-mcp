@@ -18,6 +18,8 @@ mcp = FastMCP(
         "para clínicas en Colombia. NUNCA mencionar 'IA' al cliente — siempre hablar de "
         "'sistema de control operativo centralizado'. Todos los valores monetarios en COP."
     ),
+    host=os.getenv("MCP_HOST", "0.0.0.0"),
+    port=int(os.getenv("MCP_PORT", "8080")),
 )
 
 
@@ -159,6 +161,4 @@ def jr360_calculate_revenue_loss(
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("MCP_PORT", "8080"))
-    host = os.getenv("MCP_HOST", "0.0.0.0")
-    mcp.run(transport="streamable-http", host=host, port=port, path="/mcp")
+    mcp.run(transport="streamable-http")
